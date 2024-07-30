@@ -1,7 +1,3 @@
-export {
-  FONT_FILE_NAME_PATTERN,
-  ITALIC_PATTERN,
-  VARIABLE_FONT_PATTERN,
-} from '#font';
+export { FONT_FILE_NAME_REGEX, ITALIC_REGEX, VARIABLE_FONT_REGEX } from '#font';
 
-export { extensions, selectors } from '#patterns';
+export { extensions, selectors } from '#regex';

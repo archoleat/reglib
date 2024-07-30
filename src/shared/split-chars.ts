@@ -1,3 +1,3 @@
-const SPLIT_CHARS_PATTERN = String.raw`(?:_|__|-|\s)`;
+const SPLIT_CHARS_REGEX = String.raw`(?:_|__|-|\s)`;
 
-export { SPLIT_CHARS_PATTERN };
+export { SPLIT_CHARS_REGEX };

@@ -31,8 +31,8 @@
   "type": "module",
   "types": "index.d.ts",
   "imports": {
-    "#font": "./src/patterns/font/index.ts",
-    "#patterns": "./src/patterns/index.ts",
+    "#font": "./src/regex/font/index.ts",
+    "#regex": "./src/regex/index.ts",
     "#shared": "./src/shared/index.ts"
   },
   "exports": {

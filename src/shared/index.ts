@@ -1,1 +1,1 @@
-export { SPLIT_CHARS_PATTERN } from './split-chars.ts';
+export { SPLIT_CHARS_REGEX } from './split-chars.ts';
