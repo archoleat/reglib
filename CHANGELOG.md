@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.1.0](https://github.com/archoleat/reglib/compare/v1.0.3...v1.1.0) (2024-07-31)
+
+### Features
+
+* add new regex ([#33](https://github.com/archoleat/reglib/issues/33)) ([ea14431](https://github.com/archoleat/reglib/commit/ea144318468c460db191a0b290b8f949af6d8762))
+
+### Bug Fixes
+
+* `release.yaml` ([#32](https://github.com/archoleat/reglib/issues/32)) ([7fed902](https://github.com/archoleat/reglib/commit/7fed902662164ec70ecbc2ec07ea2182a3006bfe))
+
 ## [1.0.3](https://github.com/archoleat/reglib/compare/v1.0.2...v1.0.3) (2024-07-31)
 
 ### Bug Fixes
