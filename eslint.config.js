@@ -34,6 +34,7 @@ export default defineFlatConfig([
       },
     },
     rules: {
+      'prefer-regex-literals': 'off',
       'import/exports-last': 'error',
       'import/extensions': ['error', { ts: 'always' }],
       'import/group-exports': 'error',
