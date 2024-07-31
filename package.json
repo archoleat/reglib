@@ -17,7 +17,14 @@
     "url": "https://github.com/archoleat/reglib/issues"
   },
   "keywords": [
-    "reglib"
+    "archoleat-reglib",
+    "archoleat",
+    "library",
+    "ready-to-use",
+    "regex",
+    "reglib",
+    "regular-expression",
+    "regular-expressions"
   ],
   "packageManager": "pnpm@9.4.0",
   "engines": {
