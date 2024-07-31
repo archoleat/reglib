@@ -3,10 +3,10 @@
     "allowImportingTsExtensions": true,
     "composite": true,
     "emitDeclarationOnly": true,
-    "lib": ["DOM", "ESNext"],
+    "lib": ["ESNext"],
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "outDir": "lib",
+    "outDir": "",
     "skipLibCheck": true,
     "target": "ESNext",
     "types": ["vitest"]

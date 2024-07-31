@@ -29,17 +29,15 @@
     "pnpm": "9.4.0"
   },
   "type": "module",
-  "types": "index.d.ts",
   "imports": {
     "#font": "./src/regex/font/index.ts",
     "#regex": "./src/regex/index.ts",
     "#shared": "./src/shared/index.ts"
   },
   "exports": {
-    ".": "./lib/index.js"
+    ".": "./index.js"
   },
   "files": [
-    "index.d.ts",
     "index.js"
   ],
   "scripts": {
