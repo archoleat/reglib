@@ -1,3 +1,5 @@
+import { resolve } from 'node:path';
+
 import { defineConfig } from 'rollup';
 
 import { dts } from 'rollup-plugin-dts';
@@ -25,15 +27,15 @@ export default defineConfig([
         entries: [
           {
             find: '#font',
-            replacement: `${sourceFolder}/regex/font/${indexFile}`,
+            replacement: resolve(`${sourceFolder}/regex/font/${indexFile}`),
           },
           {
             find: '#regex',
-            replacement: `${sourceFolder}/regex/${indexFile}`,
+            replacement: resolve(`${sourceFolder}/regex/${indexFile}`),
           },
           {
             find: '#shared',
-            replacement: `${sourceFolder}/shared/${indexFile}`,
+            replacement: resolve(`${sourceFolder}/shared/${indexFile}`),
           },
         ],
       }),
