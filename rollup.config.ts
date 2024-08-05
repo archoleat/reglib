@@ -9,16 +9,24 @@ import alias from '@rollup/plugin-alias';
 import typescript from '@rollup/plugin-typescript';
 
 const sourceFolder = 'src';
+const fontFolder = `${sourceFolder}/regex/font`;
+const regexFolder = `${sourceFolder}/regex`;
+const sharedFolder = `${sourceFolder}/shared`;
+
 const fileName = 'index';
 const indexFile = `${fileName}.ts`;
+const declarationFile = `${fileName}.d.ts`;
+const outputFile = `${fileName}.js`;
+
+const fileFormat = 'es';
 
 export default defineConfig([
   {
     plugins: [typescript(), minify()],
     input: `${sourceFolder}/${indexFile}`,
     output: {
-      file: `${fileName}.js`,
-      format: 'es',
+      file: outputFile,
+      format: fileFormat,
     },
   },
   {
@@ -27,15 +35,15 @@ export default defineConfig([
         entries: [
           {
             find: '#font',
-            replacement: resolve(`${sourceFolder}/regex/font/${indexFile}`),
+            replacement: resolve(`${fontFolder}/${indexFile}`),
           },
           {
             find: '#regex',
-            replacement: resolve(`${sourceFolder}/regex/${indexFile}`),
+            replacement: resolve(`${regexFolder}/${indexFile}`),
           },
           {
             find: '#shared',
-            replacement: resolve(`${sourceFolder}/shared/${indexFile}`),
+            replacement: resolve(`${sharedFolder}/${indexFile}`),
           },
         ],
       }),
@@ -43,7 +51,8 @@ export default defineConfig([
     ],
     input: `${sourceFolder}/${indexFile}`,
     output: {
-      file: `${fileName}.d.ts`,
+      file: declarationFile,
+      format: fileFormat,
     },
   },
 ]);
