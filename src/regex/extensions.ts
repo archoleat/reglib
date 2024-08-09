@@ -9,8 +9,6 @@ const extensions = {
   NODE_MODULES_REGEX_LITERAL: /node_modules/,
 };
 
-// TODO: add new regex, write readme.md and add literal version for each regex
-
 // ^#(?:[0-9a-fA-F]{3}){1,2}$ (Hexadecimal Color Validation)
 // /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&_])[A-Za-z\d$@$!%*?&_]{minlength,maxlength}$/ (Password Validation (1 uppercase, 1 lowercase, 1 number, 1 special))
 // /\b(?:ISBN(?:: ?| ))?((?:97[89])?\d{9}[\dx])\b/i (ISBN Number Validation)
