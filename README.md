@@ -14,9 +14,32 @@
 
 ## Table of Contents
 
+- [Installation](#installtion)
 - [List of Regex](#list-of-regex)
 - [Contributing](#contributing)
 - [License](#license)
+
+## Installation
+
+```shell
+# bun
+bun i -D @archoleat/commitlint-define-config
+```
+
+```shell
+# pnpm
+pnpm i -D @archoleat/validate-font-file-name
+```
+
+```shell
+# npm
+npm i -D @archoleat/validate-font-file-name
+```
+
+```shell
+# yarn
+yarn add -D @archoleat/validate-font-file-name
+```
 
 ## List of Regex
 

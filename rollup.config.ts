@@ -13,11 +13,11 @@ const fontFolder = `${sourceFolder}/regex/font`;
 const regexFolder = `${sourceFolder}/regex`;
 const sharedFolder = `${sourceFolder}/shared`;
 
-const fileName = 'index';
 const fileFormat = 'es';
+const fileName = 'index';
 
-const indexFile = `${fileName}.ts`;
 const declarationFile = `${fileName}.d.ts`;
+const indexFile = `${fileName}.ts`;
 const outputFile = `${fileName}.js`;
 
 export default defineConfig([
