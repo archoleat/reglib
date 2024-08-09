@@ -14,8 +14,59 @@
 
 ## Table of Contents
 
+- [Installation](#installtion)
+- [List of Regex](#list-of-regex)
 - [Contributing](#contributing)
 - [License](#license)
+
+## Installation
+
+```shell
+# bun
+bun i -D @archoleat/commitlint-define-config
+```
+
+```shell
+# pnpm
+pnpm i -D @archoleat/validate-font-file-name
+```
+
+```shell
+# npm
+npm i -D @archoleat/validate-font-file-name
+```
+
+```shell
+# yarn
+yarn add -D @archoleat/validate-font-file-name
+```
+
+## List of Regex
+
+- `FONT_FILE_NAME_REGEX`
+
+- `ITALIC_REGEX`
+
+- `VARIABLE_FONT_REGEX`
+
+- `EMAIL_REGEX`
+
+- `LETTER_WITH_SPACES_REGEX`
+
+- `NOT_SEPARATE_REGEX`
+
+- `NOT_SPACE_REGEX`
+
+- numbers:
+  - `ALL_REGEX`
+
+- phones:
+  - `RU_REGEX`
+  - `US_REGEX`
+
+- selectors:
+  - `RU_REGEX`
+  - `US_REGEX`
 
 ## Contributing
 

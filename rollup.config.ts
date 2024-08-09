@@ -1,3 +1,5 @@
+import { resolve } from 'node:path';
+
 import { defineConfig } from 'rollup';
 
 import { dts } from 'rollup-plugin-dts';
@@ -7,16 +9,24 @@ import alias from '@rollup/plugin-alias';
 import typescript from '@rollup/plugin-typescript';
 
 const sourceFolder = 'src';
+const fontFolder = `${sourceFolder}/regex/font`;
+const regexFolder = `${sourceFolder}/regex`;
+const sharedFolder = `${sourceFolder}/shared`;
+
+const fileFormat = 'es';
 const fileName = 'index';
+
+const declarationFile = `${fileName}.d.ts`;
 const indexFile = `${fileName}.ts`;
+const outputFile = `${fileName}.js`;
 
 export default defineConfig([
   {
     plugins: [typescript(), minify()],
     input: `${sourceFolder}/${indexFile}`,
     output: {
-      file: `${fileName}.js`,
-      format: 'es',
+      file: outputFile,
+      format: fileFormat,
     },
   },
   {
@@ -25,15 +35,15 @@ export default defineConfig([
         entries: [
           {
             find: '#font',
-            replacement: `${sourceFolder}/regex/font/${indexFile}`,
+            replacement: resolve(`${fontFolder}/${indexFile}`),
           },
           {
             find: '#regex',
-            replacement: `${sourceFolder}/regex/${indexFile}`,
+            replacement: resolve(`${regexFolder}/${indexFile}`),
           },
           {
             find: '#shared',
-            replacement: `${sourceFolder}/shared/${indexFile}`,
+            replacement: resolve(`${sharedFolder}/${indexFile}`),
           },
         ],
       }),
@@ -41,7 +51,8 @@ export default defineConfig([
     ],
     input: `${sourceFolder}/${indexFile}`,
     output: {
-      file: `${fileName}.d.ts`,
+      file: declarationFile,
+      format: fileFormat,
     },
   },
 ]);
