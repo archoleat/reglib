@@ -10,7 +10,7 @@
 ![Editorconfig](https://img.shields.io/github/actions/workflow/status/archoleat/reglib/editorconfig.yaml?label=Editorconfig)
 ![Prettier](https://img.shields.io/github/actions/workflow/status/archoleat/reglib/prettier.yaml?label=Prettier)
 ![ESLint](https://img.shields.io/github/actions/workflow/status/archoleat/reglib/eslint.yaml?label=ESLint)
-![Markdown](https://img.shields.io/github/actions/workflow/status/archoleat/reglib/markdown.yaml?label=Markdown)
+![Remark](https://img.shields.io/github/actions/workflow/status/archoleat/reglib/remark.yaml?label=Remark)
 
 ## Table of Contents
 
