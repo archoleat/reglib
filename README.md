@@ -23,22 +23,22 @@
 
 ```shell
 # bun
-bun i -D @archoleat/commitlint-define-config
+bun i -D @archoleat/reglib
 ```
 
 ```shell
 # pnpm
-pnpm i -D @archoleat/validate-font-file-name
+pnpm i -D @archoleat/reglib
 ```
 
 ```shell
 # npm
-npm i -D @archoleat/validate-font-file-name
+npm i -D @archoleat/reglib
 ```
 
 ```shell
 # yarn
-yarn add -D @archoleat/validate-font-file-name
+yarn add -D @archoleat/reglib
 ```
 
 ## List of Regex
