@@ -22,23 +22,7 @@
 ## Installation
 
 ```shell
-# bun
 bun i -D @archoleat/reglib
-```
-
-```shell
-# pnpm
-pnpm i -D @archoleat/reglib
-```
-
-```shell
-# npm
-npm i -D @archoleat/reglib
-```
-
-```shell
-# yarn
-yarn add -D @archoleat/reglib
 ```
 
 ## List of Regex
