@@ -1,15 +1,26 @@
 {
   "compilerOptions": {
-    "allowImportingTsExtensions": true,
-    "composite": true,
+    // Completeness
+    "skipLibCheck": true,
+    // Emit
+    "declaration": true,
     "emitDeclarationOnly": true,
+    "outDir": "",
+    // Language and Environment
     "lib": ["ESNext"],
+    "target": "ESNext",
+    // Modules
+    "allowImportingTsExtensions": true,
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "outDir": "",
+    "paths": {
+      "#font": ["./src/regex/font/index.ts"],
+      "#regex": ["./src/regex/index.ts"],
+      "#shared": ["./src/shared/index.ts"]
+    },
     "rootDir": "src",
-    "skipLibCheck": true,
-    "target": "ESNext",
-    "types": ["vitest"]
+    "types": ["vitest"],
+    // Projects
+    "disableReferencedProjectLoad": true
   }
 }
