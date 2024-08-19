@@ -27,6 +27,7 @@
     "regular-expression",
     "regular-expressions"
   ],
+  "packageManager": "pnpm@9.7.0",
   "engines": {
     "node": ">=20.0.0",
     "pnpm": ">=9.0.0"
