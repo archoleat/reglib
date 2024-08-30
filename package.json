@@ -34,9 +34,9 @@
   },
   "type": "module",
   "imports": {
-    "#font": "./src/regex/font/index.ts",
-    "#regex": "./src/regex/index.ts",
-    "#shared": "./src/shared/index.ts"
+    "#font/*": "./src/regex/font/*",
+    "#regex/*": "./src/regex/*",
+    "#shared/*": "./src/shared/*"
   },
   "exports": {
     ".": "./index.js",

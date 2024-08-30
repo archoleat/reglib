@@ -14,9 +14,9 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "paths": {
-      "#font": ["./src/regex/font/index.ts"],
-      "#regex": ["./src/regex/index.ts"],
-      "#shared": ["./src/shared/index.ts"]
+      "#font/*": ["./src/regex/font/*"],
+      "#regex/*": ["./src/regex/*"],
+      "#shared/*": ["./src/shared/*"]
     },
     "rootDir": "src",
     "types": ["vitest"],
