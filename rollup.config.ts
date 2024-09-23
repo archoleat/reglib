@@ -9,17 +9,15 @@ import alias from '@rollup/plugin-alias';
 import typescript from '@rollup/plugin-typescript';
 
 const sourceFolder = 'src';
-const fontFolder = `${sourceFolder}/regex/font`;
-const regexFolder = `${sourceFolder}/regex`;
+const appFolder = `${sourceFolder}/app`;
 const sharedFolder = `${sourceFolder}/shared`;
 
 const fileFormat = 'es';
-const entryFileName = 'app';
-const outputFileName = 'index';
+const fileName = 'index';
 
-const declarationFile = `${outputFileName}.d.ts`;
-const entryFile = `${entryFileName}.ts`;
-const outputFile = `${outputFileName}.js`;
+const declarationFile = `${fileName}.d.ts`;
+const entryFile = `${fileName}.ts`;
+const outputFile = `${fileName}.js`;
 
 export default defineConfig([
   {
@@ -35,16 +33,12 @@ export default defineConfig([
       alias({
         entries: [
           {
-            find: '#font',
-            replacement: resolve(fontFolder),
-          },
-          {
-            find: '#regex',
-            replacement: resolve(regexFolder),
+            find: '#app',
+            replacement: resolve(`${appFolder}/${entryFile}`),
           },
           {
             find: '#shared',
-            replacement: resolve(sharedFolder),
+            replacement: resolve(`${sharedFolder}/${entryFile}`),
           },
         ],
       }),

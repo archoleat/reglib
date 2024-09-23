@@ -28,29 +28,8 @@ bun i -D @archoleat/reglib
 ## List of Regex
 
 - `FONT_FILE_NAME_REGEX`
-
 - `ITALIC_REGEX`
-
 - `VARIABLE_FONT_REGEX`
-
-- `EMAIL_REGEX`
-
-- `LETTER_WITH_SPACES_REGEX`
-
-- `NOT_SEPARATE_REGEX`
-
-- `NOT_SPACE_REGEX`
-
-- numbers:
-  - `ALL_REGEX`
-
-- phones:
-  - `RU_REGEX`
-  - `US_REGEX`
-
-- selectors:
-  - `RU_REGEX`
-  - `US_REGEX`
 
 ## Contributing
 

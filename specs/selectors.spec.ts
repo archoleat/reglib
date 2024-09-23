@@ -1,6 +1,6 @@
 import { describe, expect, test as spec } from 'vitest';
 
-import { selectors } from '#regex';
+import { selectors } from '#index';
 
 describe('Nested Selectors Regex', () => {
   const NESTED_ATTRIBUTE = selectors.nested.ATTRIBUTE_REGEX;
