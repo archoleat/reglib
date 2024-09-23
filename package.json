@@ -47,8 +47,7 @@
     "index.js"
   ],
   "scripts": {
-    "init": "pnpm i && husky",
-    "build": "rollup -c rollup.config.ts --configPlugin typescript"
+    "init": "pnpm i && husky"
   },
   "devDependencies": {
     "@archoleat/commitlint-define-config": "^1.0.11",
