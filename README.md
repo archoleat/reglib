@@ -27,9 +27,27 @@ bun i -D @archoleat/reglib
 
 ## List of Regex
 
-- `FONT_FILE_NAME_REGEX`
-- `ITALIC_REGEX`
-- `VARIABLE_FONT_REGEX`
+- `FONT_FILE_NAME_REGEX`: Matches FontFamily-FontWeight.woff2
+
+- `ITALIC_REGEX`: Searches for the words `Italic` or `italic`.
+
+- `VARIABLE_FONT_REGEX`: Searches for the words `var` or `variable`.
+
+- `selectors`
+  - `bem`
+    - `BLOCK_REGEX`
+    - `ELEMENT_REGEX`
+    - `MODIFIER_REGEX`
+
+  - `child`
+    - `ATTRIBUTE_REGEX`
+    - `CLASS_REGEX`
+
+  - `nested`
+    - `ATTRIBUTE_REGEX`
+    - `CLASS_REGEX`
+    - `ELEMENT_REGEX`
+    - `MODIFIER_REGEX`
 
 ## Contributing
 

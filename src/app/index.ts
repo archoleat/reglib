@@ -1,7 +1,3 @@
-export {
-  FONT_FILE_NAME_REGEX,
-  ITALIC_REGEX,
-  VARIABLE_FONT_REGEX,
-} from './font/index.ts';
+export { FONT_FILE_NAME_REGEX } from './font-file-name.ts';
 
 export { selectors } from './selectors.ts';
