@@ -50,7 +50,7 @@
     "init": "pnpm i && husky"
   },
   "devDependencies": {
-    "@archoleat/commitlint-define-config": "^1.0.11",
+    "@archoleat/commitlint-define-config": "^1.0.10",
     "@archoleat/eslint-flat-compatibility": "^1.1.8",
     "@archoleat/prettier-define-config": "^1.0.2",
     "@archoleat/semantic-release-define-config": "^1.1.16",
