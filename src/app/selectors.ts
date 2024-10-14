@@ -10,15 +10,15 @@ const selectors = {
     ELEMENT_REGEX: `(${ELEMENT_REGEX}${SYMBOLS_REGEX}+(-${SYMBOLS_REGEX}+)*)`,
     MODIFIER_REGEX: `(${MODIFIER_REGEX}${SYMBOLS_REGEX}+(-${SYMBOLS_REGEX}+)*)`,
   },
+  child: {
+    ATTRIBUTE_REGEX: `${ATTRIBUTE_REGEX} &`,
+    CLASS_REGEX: `${CLASS_REGEX} &`,
+  },
   nested: {
     ATTRIBUTE_REGEX,
     CLASS_REGEX,
     ELEMENT_REGEX,
     MODIFIER_REGEX,
-  },
-  child: {
-    ATTRIBUTE_REGEX: `${ATTRIBUTE_REGEX} &`,
-    CLASS_REGEX: `${CLASS_REGEX} &`,
   },
 };
 
