@@ -1,15 +1,25 @@
 {
   "compilerOptions": {
-    "allowImportingTsExtensions": true,
-    "composite": true,
+    // Completeness
+    "skipLibCheck": true,
+    // Emit
+    "declaration": true,
     "emitDeclarationOnly": true,
+    "outDir": "",
+    // Language and Environment
     "lib": ["ESNext"],
+    "target": "ESNext",
+    // Modules
+    "allowImportingTsExtensions": true,
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "outDir": "",
-    "rootDir": "",
-    "skipLibCheck": true,
-    "target": "ESNext",
-    "types": ["vitest"]
+    "paths": {
+      "#app": ["./src/app/index.ts"],
+      "#shared": ["./src/shared/index.ts"]
+    },
+    "rootDir": "src",
+    "types": ["vitest"],
+    // Projects
+    "disableReferencedProjectLoad": true
   }
 }

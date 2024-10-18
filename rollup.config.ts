@@ -1,22 +1,26 @@
+import { resolve } from 'node:path';
 import { defineConfig } from 'rollup';
-
 import { dts } from 'rollup-plugin-dts';
 import { minify } from 'rollup-plugin-esbuild';
-
 import alias from '@rollup/plugin-alias';
 import typescript from '@rollup/plugin-typescript';
 
 const sourceFolder = 'src';
+const appFolder = `${sourceFolder}/app`;
+const sharedFolder = `${sourceFolder}/shared`;
+const fileFormat = 'es';
 const fileName = 'index';
-const indexFile = `${fileName}.ts`;
+const declarationFile = `${fileName}.d.ts`;
+const entryFile = `${fileName}.ts`;
+const outputFile = `${fileName}.js`;
 
 export default defineConfig([
   {
     plugins: [typescript(), minify()],
-    input: `${sourceFolder}/${indexFile}`,
+    input: `${sourceFolder}/${entryFile}`,
     output: {
-      file: `${fileName}.js`,
-      format: 'es',
+      file: outputFile,
+      format: fileFormat,
     },
   },
   {
@@ -24,24 +28,21 @@ export default defineConfig([
       alias({
         entries: [
           {
-            find: '#font',
-            replacement: `${sourceFolder}/regex/font/${indexFile}`,
-          },
-          {
-            find: '#regex',
-            replacement: `${sourceFolder}/regex/${indexFile}`,
+            find: '#app',
+            replacement: resolve(`${appFolder}/${entryFile}`),
           },
           {
             find: '#shared',
-            replacement: `${sourceFolder}/shared/${indexFile}`,
+            replacement: resolve(`${sharedFolder}/${entryFile}`),
           },
         ],
       }),
       dts(),
     ],
-    input: `${sourceFolder}/${indexFile}`,
+    input: `${sourceFolder}/${entryFile}`,
     output: {
-      file: `${fileName}.d.ts`,
+      file: declarationFile,
+      format: fileFormat,
     },
   },
 ]);
