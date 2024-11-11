@@ -34,9 +34,7 @@
   },
   "type": "module",
   "imports": {
-    "#app": "./src/app/index.ts",
-    "#index": "./src/index.ts",
-    "#shared": "./src/shared/index.ts"
+    "#validators": "./src/validators/index.ts"
   },
   "exports": {
     ".": "./index.js",

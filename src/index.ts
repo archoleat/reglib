@@ -1,1 +1,1 @@
-export { FONT_FILE_NAME_REGEX, selectors } from '#app';
+export { FONT_FILE_NAME_REGEX, selectors } from '#validators';

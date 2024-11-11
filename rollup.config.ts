@@ -6,8 +6,7 @@ import alias from '@rollup/plugin-alias';
 import typescript from '@rollup/plugin-typescript';
 
 const sourceFolder = 'src';
-const appFolder = `${sourceFolder}/app`;
-const sharedFolder = `${sourceFolder}/shared`;
+const validatorsFolder = `${sourceFolder}/validators`;
 const fileFormat = 'es';
 const fileName = 'index';
 const declarationFile = `${fileName}.d.ts`;
@@ -28,12 +27,8 @@ export default defineConfig([
       alias({
         entries: [
           {
-            find: '#app',
-            replacement: resolve(`${appFolder}/${entryFile}`),
-          },
-          {
-            find: '#shared',
-            replacement: resolve(`${sharedFolder}/${entryFile}`),
+            find: '#validators',
+            replacement: resolve(`${validatorsFolder}/${entryFile}`),
           },
         ],
       }),
