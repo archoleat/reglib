@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.0](https://github.com/archoleat/reglib/compare/v1.1.0...v1.2.0) (2024-11-11)
+
+### Features
+
+* add new regex ([#36](https://github.com/archoleat/reglib/issues/36)) ([bbf1a1c](https://github.com/archoleat/reglib/commit/bbf1a1caef9676834c7e963839c2db5374ff5fb5))
+
 ## [1.1.0](https://github.com/archoleat/reglib/compare/v1.0.3...v1.1.0) (2024-07-31)
 
 ### Features
