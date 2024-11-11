@@ -1,27 +1,23 @@
 import { defineFlatConfig } from 'eslint-define-config';
 import { extend } from '@archoleat/eslint-flat-compatibility';
-
-import eslintConfigPrettier from 'eslint-config-prettier';
-import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import globals from 'globals';
-import typescriptParser from '@typescript-eslint/parser';
+import importSortPlugin from 'eslint-plugin-simple-import-sort';
+import parser from '@typescript-eslint/parser';
+import prettierConfig from 'eslint-config-prettier';
+import unicornPlugin from 'eslint-plugin-unicorn';
 
 export default defineFlatConfig([
-  ...extend(
-    'airbnb-base',
-    'airbnb-typescript/base',
-    'plugin:import/recommended',
-    'plugin:import/typescript',
-  ),
-  eslintPluginUnicorn.configs['flat/recommended'],
+  ...extend('airbnb-base', 'airbnb-typescript/base'),
   {
+    files: ['src/**/*.ts'],
     languageOptions: {
-      ecmaVersion: 'latest',
+      parser,
       globals: {
         ...globals.node,
+        ...globals.es2015,
       },
-      parser: typescriptParser,
       parserOptions: {
+        ecmaVersion: 'latest',
         project: 'tsconfig.json',
       },
       sourceType: 'module',
@@ -33,13 +29,18 @@ export default defineFlatConfig([
         },
       },
     },
+    plugins: {
+      'simple-import-sort': importSortPlugin,
+      unicorn: unicornPlugin,
+    },
     rules: {
-      'prefer-regex-literals': 'off',
+      'simple-import-sort/imports': 'error',
+      'simple-import-sort/exports': 'error',
       'import/exports-last': 'error',
       'import/extensions': ['error', { ts: 'always' }],
       'import/group-exports': 'error',
       'import/no-commonjs': 'error',
-      'import/no-default-export': 'error',
+      'import/no-default-export': 'off',
       'import/no-namespace': 'error',
       'import/no-unassigned-import': 'error',
       'import/prefer-default-export': 'off',
@@ -47,5 +48,5 @@ export default defineFlatConfig([
       'unicorn/string-content': 'error',
     },
   },
-  eslintConfigPrettier,
+  prettierConfig,
 ]);
