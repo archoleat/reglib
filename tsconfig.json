@@ -14,7 +14,7 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "paths": {
-      "#validators": ["./src/validators/index.ts"]
+      "#validators/*": ["./src/validators/*"]
     },
     "rootDir": "src",
     "types": ["vitest"],
