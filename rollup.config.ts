@@ -28,7 +28,7 @@ export default defineConfig([
         entries: [
           {
             find: '#validators',
-            replacement: resolve(`${validatorsFolder}/${entryFile}`),
+            replacement: resolve(`${validatorsFolder}/`),
           },
         ],
       }),
