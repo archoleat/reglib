@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.2.1](https://github.com/archoleat/reglib/compare/v1.2.0...v1.2.1) (2024-12-08)
+
+### Bug Fixes
+
+* eslint ([#94](https://github.com/archoleat/reglib/issues/94)) ([9e9420a](https://github.com/archoleat/reglib/commit/9e9420a4d26cd533b0cde14999142d6d141fca10))
+
+### Code Refactoring
+
+* eslint config ([#93](https://github.com/archoleat/reglib/issues/93)) ([ad8a692](https://github.com/archoleat/reglib/commit/ad8a6925efd5bdb879a8a8cf0b872ae5ee57eee1))
+* small changes ([#101](https://github.com/archoleat/reglib/issues/101)) ([cc170f3](https://github.com/archoleat/reglib/commit/cc170f3cfa8ffab17d246531ad457bc10f6f3f0f))
+* structure ([#102](https://github.com/archoleat/reglib/issues/102)) ([768d8e3](https://github.com/archoleat/reglib/commit/768d8e30f698fde4b93bc8fed7579c340a0a33e0))
+
+### Documentation
+
+* **readme:** remove extra badges ([#95](https://github.com/archoleat/reglib/issues/95)) ([d64b5f9](https://github.com/archoleat/reglib/commit/d64b5f90ad35af0289eefd07f1bbcf8cf2376137))
+
 ## [1.2.0](https://github.com/archoleat/reglib/compare/v1.1.0...v1.2.0) (2024-11-11)
 
 ### Features
