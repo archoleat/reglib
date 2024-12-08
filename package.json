@@ -34,8 +34,8 @@
   },
   "type": "module",
   "imports": {
-    "#index": "./src/index.ts",
-    "#validators": "./src/validators/index.ts"
+    "#src/*": "./src/*",
+    "#validators/*": "./src/validators/*"
   },
   "exports": {
     ".": "./index.js",
