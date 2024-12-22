@@ -27,10 +27,8 @@
     "regular-expression",
     "regular-expressions"
   ],
-  "packageManager": "pnpm@9.7.0",
   "engines": {
-    "node": ">=20.0.0",
-    "pnpm": ">=9.0.0"
+    "bun": ">=1.0.0"
   },
   "type": "module",
   "imports": {
@@ -46,7 +44,7 @@
     "index.js"
   ],
   "scripts": {
-    "init": "pnpm i && husky"
+    "init": "bun i && husky"
   },
   "devDependencies": {
     "@archoleat/commitlint-define-config": "^1.1.0",
@@ -88,8 +86,6 @@
     "rollup": "^4.28.0",
     "rollup-plugin-dts": "^6.1.1",
     "rollup-plugin-esbuild": "^6.1.1",
-    "semantic-release": "^24.2.0",
-    "typescript": "^5.7.2",
-    "vitest": "^2.1.6"
+    "semantic-release": "^24.2.0"
   }
 }
