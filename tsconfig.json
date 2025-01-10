@@ -17,7 +17,6 @@
       "#validators/*": ["./src/validators/*"]
     },
     "rootDir": "src",
-    "types": ["vitest"],
     // Projects
     "disableReferencedProjectLoad": true,
     // Type Checking
