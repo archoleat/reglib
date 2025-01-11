@@ -8,12 +8,18 @@ const BLOCK_REGEX = `[a-z]${SYMBOLS_REGEX}*(-${SYMBOLS_REGEX}+)*`;
 const ELEMENT_REGEX = `(${ELEMENT_S_REGEX}${SYMBOLS_REGEX}+(-${SYMBOLS_REGEX}+)*)`;
 const MODIFIER_REGEX = `(${MODIFIER_S_REGEX}${SYMBOLS_REGEX}+(-${SYMBOLS_REGEX}+)*)`;
 
-const NESTED_CHILD_REGEX = String.raw`&>[^ ,{}]+`; // & > ...
-const NESTED_SIBLING_REGEX = String.raw`&\+[^ ,{}]+`; // & + ...
-const CLASS_CHILD_REGEX = String.raw`\.${SYMBOLS_REGEX}+>[^ ,{}]+`; // .class > ...
-const CLASS_SIBLING_REGEX = String.raw`\.${SYMBOLS_REGEX}+\+[^ ,{}]+`; // .class + ...
-const ATTRIBUTE_CHILD_REGEX = String.raw`\[.*?\]+>[^ ,{}]+`; // [attr] > ...
-const ATTRIBUTE_SIBLING_REGEX = String.raw`\[.*?\]+[^ ,{}]+`; // [attr] + ...
+const SIBLING_REGEX = String.raw`[^ ,{}]+\+[^ ,{}]+`;
+const CHILD_REGEX = String.raw`[^ ,{}]+>[^ ,{}]+`;
+
+const ATTRIBUTE_SIBLING_REGEX = String.raw`\[.*?\]+[^ ,{}]+`;
+const ATTRIBUTE_CHILD_REGEX = String.raw`\[.*?\]+>[^ ,{}]+`;
+const CLASS_SIBLING_REGEX = String.raw`\.${SYMBOLS_REGEX}+\+[^ ,{}]+`;
+const CLASS_CHILD_REGEX = String.raw`\.${SYMBOLS_REGEX}+>[^ ,{}]+`;
+
+const NESTED_ATTRIBUTE_SIBLING_REGEX = String.raw`&\[.*?\]+[^ ,{}]+`;
+const NESTED_ATTRIBUTE_CHILD_REGEX = String.raw`&\[.*?\]+>[^ ,{}]+`;
+const NESTED_CLASS_SIBLING_REGEX = String.raw`&\.${SYMBOLS_REGEX}+\+[^ ,{}]+`;
+const NESTED_CLASS_CHILD_REGEX = String.raw`&\.${SYMBOLS_REGEX}+>[^ ,{}]+`;
 
 const selectors = {
   bem: {
@@ -22,6 +28,8 @@ const selectors = {
     MODIFIER_REGEX,
   },
   child: {
+    CHILD_REGEX,
+    SIBLING_REGEX,
     CLASS_CHILD_REGEX,
     CLASS_SIBLING_REGEX,
     ATTRIBUTE_CHILD_REGEX,
@@ -32,8 +40,10 @@ const selectors = {
     CLASS_REGEX,
     ELEMENT_REGEX,
     MODIFIER_REGEX,
-    NESTED_CHILD_REGEX,
-    NESTED_SIBLING_REGEX,
+    NESTED_ATTRIBUTE_CHILD_REGEX,
+    NESTED_ATTRIBUTE_SIBLING_REGEX,
+    NESTED_CLASS_CHILD_REGEX,
+    NESTED_CLASS_SIBLING_REGEX,
   },
 };
 
