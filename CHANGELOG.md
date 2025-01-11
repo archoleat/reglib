@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.5.0](https://github.com/archoleat/reglib/compare/v1.4.0...v1.5.0) (2025-01-11)
+
+### Features
+
+* regex ([#119](https://github.com/archoleat/reglib/issues/119)) ([5b08d6a](https://github.com/archoleat/reglib/commit/5b08d6ace75fe9b7571837d2ba96fa9ff725533d))
+
 ## [1.4.0](https://github.com/archoleat/reglib/compare/v1.3.1...v1.4.0) (2025-01-11)
 
 ### Features
