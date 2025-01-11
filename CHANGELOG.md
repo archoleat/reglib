@@ -1,5 +1,30 @@
 # Changelog
 
+## [1.3.0](https://github.com/archoleat/reglib/compare/v1.2.1...v1.3.0) (2025-01-11)
+
+### ⚠ BREAKING CHANGES
+
+* migrate to bun (#107)
+
+### Features
+
+* new regex ([#115](https://github.com/archoleat/reglib/issues/115)) ([db6581d](https://github.com/archoleat/reglib/commit/db6581dd3bca529e3e16372df58483729335e2d3))
+
+### Bug Fixes
+
+* tests ([#105](https://github.com/archoleat/reglib/issues/105)) ([3dd2226](https://github.com/archoleat/reglib/commit/3dd22262e351cc6c0ff44e57d4ef5c9ed0a76de7))
+* tsconfig alias ([#103](https://github.com/archoleat/reglib/issues/103)) ([8c4fd62](https://github.com/archoleat/reglib/commit/8c4fd62ac58535c4f77770772893c10e26410ec1))
+
+### Code Refactoring
+
+* ecrc ([f4a05fa](https://github.com/archoleat/reglib/commit/f4a05fa287b2a4c95dc11386703b0ef9e7e27f0c))
+* ecrc ([260e36b](https://github.com/archoleat/reglib/commit/260e36bd77ac87c0b4a5c3924329d51457f57c1d))
+* migrate to bun ([#107](https://github.com/archoleat/reglib/issues/107)) ([62ea2e4](https://github.com/archoleat/reglib/commit/62ea2e4c2c2a371e18a7ced1c4935eb520fa5b68))
+* prettierignore ([69dcd04](https://github.com/archoleat/reglib/commit/69dcd044b0aeab170fa64d562a043335e2c9798f))
+* prettierignore ([#106](https://github.com/archoleat/reglib/issues/106)) ([0e84c77](https://github.com/archoleat/reglib/commit/0e84c772dbb761a5457e4ef997706a8ce1f9281e))
+* small changes ([#104](https://github.com/archoleat/reglib/issues/104)) ([089e590](https://github.com/archoleat/reglib/commit/089e590dd0aecc3c7fd42926303a49ef8819bfcb))
+* tsconfig ([bfb6445](https://github.com/archoleat/reglib/commit/bfb64451e4eaa7425ceada087d9616fbaae8f2a6))
+
 ## [1.2.1](https://github.com/archoleat/reglib/compare/v1.2.0...v1.2.1) (2024-12-08)
 
 ### Bug Fixes
