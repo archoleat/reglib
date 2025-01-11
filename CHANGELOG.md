@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.4.0](https://github.com/archoleat/reglib/compare/v1.3.1...v1.4.0) (2025-01-11)
+
+### Features
+
+* new regex ([#118](https://github.com/archoleat/reglib/issues/118)) ([fb00897](https://github.com/archoleat/reglib/commit/fb008973fa0314aa76b48e0437ff6dc9469fadd3))
+
+### Bug Fixes
+
+* editorconfig-checker.json ([#117](https://github.com/archoleat/reglib/issues/117)) ([940e832](https://github.com/archoleat/reglib/commit/940e83230fb7af4159856f651d46fa60f5a1f34f))
+
 ## [1.3.1](https://github.com/archoleat/reglib/compare/v1.3.0...v1.3.1) (2025-01-11)
 
 ### Code Refactoring
