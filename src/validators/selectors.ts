@@ -21,6 +21,9 @@ const NESTED_ATTRIBUTE_CHILD_REGEX = String.raw`&\[.*?\]+>[^ ,{}]+`;
 const NESTED_CLASS_SIBLING_REGEX = String.raw`&\.${SYMBOLS_REGEX}+\+[^ ,{}]+`;
 const NESTED_CLASS_CHILD_REGEX = String.raw`&\.${SYMBOLS_REGEX}+>[^ ,{}]+`;
 
+const NESTED_ATTRIBUTE_REGEX = String.raw`&\[.*?\]`;
+const NESTED_CLASS_REGEX = String.raw`&\.${SYMBOLS_REGEX}+`;
+
 const selectors = {
   bem: {
     BLOCK_REGEX,
@@ -40,6 +43,8 @@ const selectors = {
     CLASS_REGEX,
     ELEMENT_REGEX,
     MODIFIER_REGEX,
+    NESTED_ATTRIBUTE_REGEX,
+    NESTED_CLASS_REGEX,
     NESTED_ATTRIBUTE_CHILD_REGEX,
     NESTED_ATTRIBUTE_SIBLING_REGEX,
     NESTED_CLASS_CHILD_REGEX,
