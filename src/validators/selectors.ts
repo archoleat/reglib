@@ -1,6 +1,6 @@
 const SYMBOLS_REGEX = '[a-z0-9]';
-const ATTRIBUTE_REGEX = String.raw`\[(.*?)\]`;
-const CLASS_REGEX = String.raw`\.(.*?)`;
+const ATTRIBUTE_REGEX = String.raw`\[[^\]]+\]`;
+const CLASS_REGEX = String.raw`\.[a-z0-9_-]+`;
 const ELEMENT_S_REGEX = '__';
 const MODIFIER_S_REGEX = '--';
 
@@ -8,21 +8,21 @@ const BLOCK_REGEX = `[a-z]${SYMBOLS_REGEX}*(-${SYMBOLS_REGEX}+)*`;
 const ELEMENT_REGEX = `(${ELEMENT_S_REGEX}${SYMBOLS_REGEX}+(-${SYMBOLS_REGEX}+)*)`;
 const MODIFIER_REGEX = `(${MODIFIER_S_REGEX}${SYMBOLS_REGEX}+(-${SYMBOLS_REGEX}+)*)`;
 
-const SIBLING_REGEX = String.raw`[^ ,{}]+\+[^ ,{}]+`;
-const CHILD_REGEX = String.raw`[^ ,{}]+>[^ ,{}]+`;
+const SIBLING_REGEX = String.raw`[^ ,{}]+\s*\+\s*[^ ,{}]+`;
+const CHILD_REGEX = String.raw`[^ ,{}]+\s*>\s*[^ ,{}]+`;
 
-const ATTRIBUTE_SIBLING_REGEX = String.raw`\[.*?\]+[^ ,{}]+`;
-const ATTRIBUTE_CHILD_REGEX = String.raw`\[.*?\]+>[^ ,{}]+`;
-const CLASS_SIBLING_REGEX = String.raw`\.${SYMBOLS_REGEX}+\+[^ ,{}]+`;
-const CLASS_CHILD_REGEX = String.raw`\.${SYMBOLS_REGEX}+>[^ ,{}]+`;
+const ATTRIBUTE_SIBLING_REGEX = String.raw`\[[^\]]+\]\s*\+\s*[^ ,{}]+`;
+const ATTRIBUTE_CHILD_REGEX = String.raw`\[[^\]]+\]\s*>\s*[^ ,{}]+`;
+const CLASS_SIBLING_REGEX = String.raw`\.[a-z0-9_-]+\s*\+\s*[^ ,{}]+`;
+const CLASS_CHILD_REGEX = String.raw`\.[a-z0-9_-]+\s*>\s*[^ ,{}]+`;
 
-const NESTED_ATTRIBUTE_SIBLING_REGEX = String.raw`&\[.*?\]+[^ ,{}]+`;
-const NESTED_ATTRIBUTE_CHILD_REGEX = String.raw`&\[.*?\]+>[^ ,{}]+`;
-const NESTED_CLASS_SIBLING_REGEX = String.raw`&\.${SYMBOLS_REGEX}+\+[^ ,{}]+`;
-const NESTED_CLASS_CHILD_REGEX = String.raw`&\.${SYMBOLS_REGEX}+>[^ ,{}]+`;
+const NESTED_ATTRIBUTE_SIBLING_REGEX = String.raw`&\[[^\]]+\]\s*\+\s*[^ ,{}]+`;
+const NESTED_ATTRIBUTE_CHILD_REGEX = String.raw`&\[[^\]]+\]\s*>\s*[^ ,{}]+`;
+const NESTED_CLASS_SIBLING_REGEX = String.raw`&\.[a-z0-9_-]+\s*\+\s*[^ ,{}]+`;
+const NESTED_CLASS_CHILD_REGEX = String.raw`&\.[a-z0-9_-]+\s*>\s*[^ ,{}]+`;
 
-const NESTED_ATTRIBUTE_REGEX = String.raw`&\[.*?\]`;
-const NESTED_CLASS_REGEX = String.raw`&\.${SYMBOLS_REGEX}+`;
+const NESTED_ATTRIBUTE_REGEX = String.raw`&\[[^\]]+\]`;
+const NESTED_CLASS_REGEX = String.raw`&\.[a-z0-9_-]+`;
 
 const selectors = {
   bem: {
