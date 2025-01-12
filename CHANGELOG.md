@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.5.1](https://github.com/archoleat/reglib/compare/v1.5.0...v1.5.1) (2025-01-12)
+
+### Bug Fixes
+
+* checker ([#120](https://github.com/archoleat/reglib/issues/120)) ([5c2805e](https://github.com/archoleat/reglib/commit/5c2805e65b4f290f59eb58773c3c81e9c67130aa))
+
+### Code Refactoring
+
+* regex ([#121](https://github.com/archoleat/reglib/issues/121)) ([865cb4d](https://github.com/archoleat/reglib/commit/865cb4d8edf7258a6173ffca40d2e919738751a2))
+
 ## [1.5.0](https://github.com/archoleat/reglib/compare/v1.4.0...v1.5.0) (2025-01-11)
 
 ### Features
