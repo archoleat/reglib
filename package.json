@@ -1,7 +1,7 @@
 {
   "name": "@archoleat/reglib",
   "description": "Library with ready-to-use regex",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "license": "MIT",
   "author": {
     "email": "archoleat@gmail.com",
