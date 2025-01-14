@@ -24,27 +24,127 @@ bun i -D @archoleat/reglib
 
 ## List of Regex
 
-- `FONT_FILE_NAME_REGEX`: Matches FontFamily-FontWeight.woff2
+This library provides a collection of useful
+regular expressions for various use cases.
+Below is a list of the exported regex
+patterns along with their explanations:
 
-- `ITALIC_REGEX`: Searches for the words `Italic` or `italic`.
+- ATTRIBUTE_REGEX
 
-- `VARIABLE_FONT_REGEX`: Searches for the words `var` or `variable`.
+  - Pattern: `\[[^\]]+\]`.
+  - Description: Matches an attribute in square brackets.
+  - Example: Matches `[attr]`, `[data-test]`, but not `[attr or attr]`.
 
-- `selectors`
-  - `bem`
-    - `BLOCK_REGEX`
-    - `ELEMENT_REGEX`
-    - `MODIFIER_REGEX`
+- CLASS_REGEX
 
-  - `child`
-    - `ATTRIBUTE_REGEX`
-    - `CLASS_REGEX`
+  - Pattern: `\.[a-z0-9_-]+`.
+  - Description: Matches a CSS class name starting with a dot (.).
+  - Example: Matches `.class`, `.my-class`, `.class_name`, but not `class` or `.class!`.
 
-  - `nested`
-    - `ATTRIBUTE_REGEX`
-    - `CLASS_REGEX`
-    - `ELEMENT_REGEX`
-    - `MODIFIER_REGEX`
+- BLOCK_REGEX
+
+  - Pattern: `[a-z][a-z0-9]*(-[a-z0-9]+)*`.
+  - Description: Matches a BEM block name.
+  - Example: Matches `block`, `my-block`, `block-name`, but not `Block` or `block!`.
+
+- ELEMENT_REGEX
+
+  - Pattern: `(__[a-z0-9]+(-[a-z0-9]+)*)`.
+  - Description: Matches a BEM element name.
+  - Example: Matches `__element`, `__my-element`, but not `element` or `__element!`.
+
+- MODIFIER_REGEX
+
+  - Pattern: `(--[a-z0-9]+(-[a-z0-9]+)*)`.
+  - Description: Matches a BEM modifier name.
+  - Example: Matches `--modifier`, `--my-modifier`, but not `modifier` or `--modifier!`.
+
+- SIBLING_REGEX
+
+  - Pattern: `(?:[^ ,{}]+\s*)?\+\s*[^ ,{}]+`.
+  - Description: Matches a sibling selector in CSS.
+  - Example: Matches `+ p`, `div + p`, `.class + .another-class`, but not `div > p`.
+
+- CHILD_REGEX
+
+  - Pattern: `(?:[^ ,{}]+\s*)?>\s*[^ ,{}]+`.
+  - Description: Matches a child selector in CSS.
+  - Example: Matches `> p`, `div > p`, `.class > .another-class`, but not `div + p`.
+
+- ATTRIBUTE_SIBLING_REGEX
+
+  - Pattern: `\[[^\]]+\]\s*\+\s*[^ ,{}]+`.
+  - Description: Matches an attribute selector followed by a sibling selector.
+  - Example: Matches `[attr] + div`, `[data-test] + .class`.
+
+- ATTRIBUTE_CHILD_REGEX
+
+  - Pattern: `\[[^\]]+\]\s*>\s*[^ ,{}]+`.
+  - Description: Matches an attribute selector followed by a child selector.
+  - Example: Matches `[attr] > div`, `[data-test] > .class`.
+
+- CLASS_SIBLING_REGEX
+
+  - Pattern: `\.[a-z0-9_-]+\s*\+\s*[^ ,{}]+`.
+  - Description: Matches a class selector followed by a sibling selector.
+  - Example: Matches `.class + div`, `.my-class + .another-class`.
+
+- CLASS_CHILD_REGEX
+
+  - Pattern: `\.[a-z0-9_-]+\s*>\s*[^ ,{}]+`.
+  - Description: Matches a class selector followed by a child selector.
+  - Example: Matches `.class > div`, `.my-class > .another-class`.
+
+- NESTED_ATTRIBUTE_SIBLING_REGEX
+
+  - Pattern: `&\[[^\]]+\]\s*\+\s*[^ ,{}]+`.
+
+  - Description: Matches a nested attribute selector
+    followed by a sibling selector.
+
+  - Example: Matches `&[attr] + div`, `&[data-test] + .class`.
+
+- NESTED_ATTRIBUTE_CHILD_REGEX
+
+  - Pattern: `&\[[^\]]+\]\s*>\s*[^ ,{}]+`.
+
+  - Description: Matches a nested attribute selector
+    followed by a child selector.
+
+  - Example: Matches `&[attr] > div`, `&[data-test] > .class`.
+
+- NESTED_CLASS_SIBLING_REGEX
+
+  - Pattern: `&\.[a-z0-9_-]+\s*\+\s*[^ ,{}]+`.
+  - Description: Matches a nested class selector followed by a sibling selector.
+  - Example: Matches `&.class + div`, `&.my-class + .another-class`.
+
+- NESTED_CLASS_CHILD_REGEX
+
+  - Pattern: `&\.[a-z0-9_-]+\s*>\s*[^ ,{}]+`.
+  - Description: Matches a nested class selector followed by a child selector.
+  - Example: Matches `&.class > div`, `&.my-class > .another-class`.
+
+- NESTED_ATTRIBUTE_REGEX
+
+  - Pattern: `&\[[^\]]+\]`.
+  - Description: Matches a nested attribute selector.
+  - Example: Matches `&[attr]`, `&[data-test]`.
+
+- NESTED_CLASS_REGEX
+
+  - Pattern: `&\.[a-z0-9_-]+`.
+  - Description: Matches a nested class selector.
+  - Example: Matches `&.class`, `&.my-class`.
+
+- FONT_FILE_NAME_REGEX
+
+  - Pattern: A complex regex for matching font file names.
+
+  - Description: Matches font file names based on family,
+    weight, italic, variable, and extension.
+
+  - Example: Matches `Roboto-Bold.woff2`, `OpenSans-Italic-Variable.ttf`.
 
 ## Contributing
 
