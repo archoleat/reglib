@@ -145,6 +145,7 @@ patterns along with their explanations:
     weight, italic, variable, and extension.
 
   - Example: Matches `Roboto-Bold.woff2`, `OpenSans-Italic-Variable.ttf`.
+    > More info [validate-font-file-name](https://github.com/archoleat/validate-font-file-name)
 
 ## Contributing
 
