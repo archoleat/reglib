@@ -8,8 +8,8 @@ const BLOCK_REGEX = `[a-z]${SYMBOLS_REGEX}*(-${SYMBOLS_REGEX}+)*`;
 const ELEMENT_REGEX = `(${ELEMENT_S_REGEX}${SYMBOLS_REGEX}+(-${SYMBOLS_REGEX}+)*)`;
 const MODIFIER_REGEX = `(${MODIFIER_S_REGEX}${SYMBOLS_REGEX}+(-${SYMBOLS_REGEX}+)*)`;
 
-const SIBLING_REGEX = String.raw`[^ ,{}]+\s*\+\s*[^ ,{}]+`;
-const CHILD_REGEX = String.raw`[^ ,{}]+\s*>\s*[^ ,{}]+`;
+const SIBLING_REGEX = String.raw`(?:[^ ,{}]+\s*)?\+\s*[^ ,{}]+`;
+const CHILD_REGEX = String.raw`(?:[^ ,{}]+\s*)?>\s*[^ ,{}]+`;
 
 const ATTRIBUTE_SIBLING_REGEX = String.raw`\[[^\]]+\]\s*\+\s*[^ ,{}]+`;
 const ATTRIBUTE_CHILD_REGEX = String.raw`\[[^\]]+\]\s*>\s*[^ ,{}]+`;
@@ -39,8 +39,8 @@ const selectors = {
   NESTED_CLASS_REGEX,
   NESTED_CLASS_SIBLING_REGEX,
   SIBLING_REGEX,
-  ELEMENT_REGEX: ELEMENT_S_REGEX,
-  MODIFIER_REGEX: MODIFIER_S_REGEX,
+  ELEMENT_REGEX: `&${ELEMENT_S_REGEX}.+`,
+  MODIFIER_REGEX: `&${MODIFIER_S_REGEX}.+`,
   bem: {
     BLOCK_REGEX,
     ELEMENT_REGEX,
