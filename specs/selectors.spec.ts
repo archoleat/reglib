@@ -1,81 +1,77 @@
 import { describe, expect, test as spec } from 'bun:test';
 
-import { selectors } from '#src/index.ts';
+import { NESTED_ATTRIBUTE_REGEX, NESTED_CLASS_REGEX } from '#src/index.ts';
 
 describe('Nested Selectors Regex', async () => {
-  const NESTED_ATTRIBUTE = selectors.ATTRIBUTE_REGEX;
-  const NESTED_CLASS = selectors.CLASS_REGEX;
-  const NESTED_MODIFIER = selectors.MODIFIER_REGEX;
-
   spec('should &[attribute]', async () => {
-    expect('&[attribute]').toMatch(new RegExp(`&${NESTED_ATTRIBUTE}`));
+    expect('&[attribute]').toMatch(new RegExp(NESTED_ATTRIBUTE_REGEX));
   });
 
   spec('should &[attribute] {}', async () => {
-    expect('&[attribute] {}').toMatch(new RegExp(`&${NESTED_ATTRIBUTE}`));
+    expect('&[attribute] {}').toMatch(new RegExp(NESTED_ATTRIBUTE_REGEX));
   });
 
   spec('should &[attribute=value]', async () => {
-    expect('&[attribute=value]').toMatch(new RegExp(`&${NESTED_ATTRIBUTE}`));
+    expect('&[attribute=value]').toMatch(new RegExp(NESTED_ATTRIBUTE_REGEX));
   });
 
   spec('should &[attribute*=value]', async () => {
-    expect('&[attribute*=value]').toMatch(new RegExp(`&${NESTED_ATTRIBUTE}`));
+    expect('&[attribute*=value]').toMatch(new RegExp(NESTED_ATTRIBUTE_REGEX));
   });
 
   spec('should &[attribute=value] {}', async () => {
-    expect('&[attribute=value] {}').toMatch(new RegExp(`&${NESTED_ATTRIBUTE}`));
+    expect('&[attribute=value] {}').toMatch(new RegExp(NESTED_ATTRIBUTE_REGEX));
   });
 
   spec('should &[attribute*=value] {}', async () => {
-    expect('&[attribute*=value] {}').toMatch(new RegExp(`&${NESTED_ATTRIBUTE}`));
+    expect('&[attribute*=value] {}').toMatch(new RegExp(NESTED_ATTRIBUTE_REGEX));
   });
 
   spec("&[attribute='value']", async () => {
-    expect("&[attribute='value']").toMatch(new RegExp(`&${NESTED_ATTRIBUTE}`));
+    expect("&[attribute='value']").toMatch(new RegExp(NESTED_ATTRIBUTE_REGEX));
   });
 
   spec('should &[attribute*="value"]', async () => {
-    expect('&[attribute*="value"]').toMatch(new RegExp(`&${NESTED_ATTRIBUTE}`));
+    expect('&[attribute*="value"]').toMatch(new RegExp(NESTED_ATTRIBUTE_REGEX));
   });
 
   spec('should &[attribute="value"] {}', async () => {
-    expect("&[attribute='value'] {}").toMatch(new RegExp(`&${NESTED_ATTRIBUTE}`));
+    expect("&[attribute='value'] {}").toMatch(new RegExp(NESTED_ATTRIBUTE_REGEX));
   });
 
   spec('should &[attribute*="value"] {}', async () => {
-    expect("&[attribute*='value'] {}").toMatch(new RegExp(`&${NESTED_ATTRIBUTE}`));
+    expect("&[attribute*='value'] {}").toMatch(new RegExp(NESTED_ATTRIBUTE_REGEX));
   });
 
   spec("&[attribute='value']", async () => {
-    expect("&[attribute='value']").toMatch(new RegExp(`&${NESTED_ATTRIBUTE}`));
+    expect("&[attribute='value']").toMatch(new RegExp(NESTED_ATTRIBUTE_REGEX));
   });
 
   spec("&[attribute*='value']", async () => {
-    expect("&[attribute*='value']").toMatch(new RegExp(`&${NESTED_ATTRIBUTE}`));
+    expect("&[attribute*='value']").toMatch(new RegExp(NESTED_ATTRIBUTE_REGEX));
   });
 
   spec("&[attribute='value'] {}", async () => {
-    expect("&[attribute='value'] {}").toMatch(new RegExp(`&${NESTED_ATTRIBUTE}`));
+    expect("&[attribute='value'] {}").toMatch(new RegExp(NESTED_ATTRIBUTE_REGEX));
   });
 
   spec("&[attribute*='value'] {}", async () => {
-    expect("&[attribute*='value'] {}").toMatch(new RegExp(`&${NESTED_ATTRIBUTE}`));
+    expect("&[attribute*='value'] {}").toMatch(new RegExp(NESTED_ATTRIBUTE_REGEX));
   });
 
   spec('should &.class', async () => {
-    expect('&.class').toMatch(new RegExp(`&${NESTED_CLASS}`));
+    expect('&.class').toMatch(new RegExp(NESTED_CLASS_REGEX));
   });
 
   spec('should &.class {}', async () => {
-    expect('&.class {}').toMatch(new RegExp(`&${NESTED_CLASS}`));
+    expect('&.class {}').toMatch(new RegExp(NESTED_CLASS_REGEX));
   });
 
   // spec('should &--modifier', async () => {
-  //   expect('&--modifier').toMatch(new RegExp(`&${NESTED_MODIFIER}`));
+  //   expect('&--modifier').toMatch(new RegExp(MODIFIER_REGEX));
   // });
 
   // spec('should &--modifier {}', async () => {
-  //   expect('&--modifier {}').toMatch(new RegExp(`&${NESTED_MODIFIER}`));
+  //   expect('&--modifier {}').toMatch(new RegExp(MODIFIER_REGEX));
   // });
 });
