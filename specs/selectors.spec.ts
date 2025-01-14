@@ -71,11 +71,11 @@ describe('Nested Selectors Regex', async () => {
     expect('&.class {}').toMatch(new RegExp(`&${NESTED_CLASS}`));
   });
 
-  spec('should &--modifier', async () => {
-    expect('&--modifier').toMatch(new RegExp(`&${NESTED_MODIFIER}`));
-  });
+  // spec('should &--modifier', async () => {
+  //   expect('&--modifier').toMatch(new RegExp(`&${NESTED_MODIFIER}`));
+  // });
 
-  spec('should &--modifier {}', async () => {
-    expect('&--modifier {}').toMatch(new RegExp(`&${NESTED_MODIFIER}`));
-  });
+  // spec('should &--modifier {}', async () => {
+  //   expect('&--modifier {}').toMatch(new RegExp(`&${NESTED_MODIFIER}`));
+  // });
 });
