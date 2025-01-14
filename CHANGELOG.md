@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.5.4](https://github.com/archoleat/reglib/compare/v1.5.3...v1.5.4) (2025-01-14)
+
+### Code Refactoring
+
+* architecture ([#125](https://github.com/archoleat/reglib/issues/125)) ([ad95ce5](https://github.com/archoleat/reglib/commit/ad95ce52eede5c8f84de5f0e3952d0c871a4bc80))
+
 ## [1.5.3](https://github.com/archoleat/reglib/compare/v1.5.2...v1.5.3) (2025-01-14)
 
 ### Bug Fixes
