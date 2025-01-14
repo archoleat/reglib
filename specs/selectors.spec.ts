@@ -3,9 +3,9 @@ import { describe, expect, test as spec } from 'bun:test';
 import { selectors } from '#src/index.ts';
 
 describe('Nested Selectors Regex', async () => {
-  const NESTED_ATTRIBUTE = selectors.nested.ATTRIBUTE_REGEX;
-  const NESTED_CLASS = selectors.nested.CLASS_REGEX;
-  const NESTED_MODIFIER = selectors.nested.MODIFIER_REGEX;
+  const NESTED_ATTRIBUTE = selectors.ATTRIBUTE_REGEX;
+  const NESTED_CLASS = selectors.CLASS_REGEX;
+  const NESTED_MODIFIER = selectors.MODIFIER_REGEX;
 
   spec('should &[attribute]', async () => {
     expect('&[attribute]').toMatch(new RegExp(`&${NESTED_ATTRIBUTE}`));
