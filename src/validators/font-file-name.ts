@@ -1,5 +1,5 @@
-import { ITALIC_REGEX } from './italic.ts';
-import { VARIABLE_REGEX } from './variable.ts';
+import { ITALIC_REGEX } from './helpers/italic.ts';
+import { VARIABLE_REGEX } from './helpers/variable.ts';
 
 const LETTERS_REGEX = '[A-Z][a-z]';
 const FONT_FAMILY_REGEX = `^${LETTERS_REGEX}+(${LETTERS_REGEX}+)?`;
