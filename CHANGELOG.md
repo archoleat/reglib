@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.8.0](https://github.com/archoleat/reglib/compare/v1.7.0...v1.8.0) (2025-01-16)
+
+### Features
+
+* specs ([#128](https://github.com/archoleat/reglib/issues/128)) ([103758d](https://github.com/archoleat/reglib/commit/103758d6ab4b9a225ae636fe7b81b29db1c6eaaf))
+
 ## [1.7.0](https://github.com/archoleat/reglib/compare/v1.6.0...v1.7.0) (2025-01-14)
 
 ### Features
