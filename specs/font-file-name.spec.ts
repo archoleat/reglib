@@ -1,4 +1,5 @@
 import { describe, expect, test as spec } from 'bun:test';
+
 import { FONT_FILE_NAME_REGEX } from '#src/index.ts';
 
 describe('FONT_FILE_NAME_REGEX', () => {
