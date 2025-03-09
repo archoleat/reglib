@@ -1,4 +1,5 @@
 import { describe, expect, test as spec } from 'bun:test';
+
 import { HYPHEN_REGEX, HYPHENS_REGEX } from '#src/index.ts';
 
 describe('Hyphen Regexes', () => {
