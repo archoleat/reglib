@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.9.0](https://github.com/archoleat/reglib/compare/v1.8.0...v1.9.0) (2025-03-09)
+
+### Features
+
+* new regex ([#139](https://github.com/archoleat/reglib/issues/139)) ([dc23ead](https://github.com/archoleat/reglib/commit/dc23ead66a1d15838a737c22ad855d2d64b5d0b5))
+
+### Code Refactoring
+
+* ignore ([235ec7b](https://github.com/archoleat/reglib/commit/235ec7b21cc86b23468c7121d1fcac9cc5d81d0b))
+
 ## [1.8.0](https://github.com/archoleat/reglib/compare/v1.7.0...v1.8.0) (2025-01-16)
 
 ### Features
