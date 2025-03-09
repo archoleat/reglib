@@ -21,7 +21,7 @@ import {
   NESTED_CLASS_CHILD_REGEX,
 } from '#src/index.ts';
 
-describe('Nested Selectors Regex', async () => {
+describe('Nested Selectors Regex', () => {
   spec('should match &[attribute]', async () => {
     expect('&[attribute]').toMatch(new RegExp(NESTED_ATTRIBUTE_REGEX));
   });

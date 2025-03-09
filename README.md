@@ -16,18 +16,28 @@
 - [Contributing](#contributing)
 - [License](#license)
 
+This library provides a collection of useful
+regular expressions for various use cases.
+
 ## Installation
 
 ```shell
 bun i -D @archoleat/reglib
 ```
 
-## List of Regex
+```shell
+pnpm i -D @archoleat/reglib
+```
 
-This library provides a collection of useful
-regular expressions for various use cases.
-Below is a list of the exported regex
-patterns along with their explanations:
+```shell
+npm i -D @archoleat/reglib
+```
+
+```shell
+yarn add @archoleat/reglib --dev
+```
+
+## List of Regex
 
 - ATTRIBUTE_REGEX
 
