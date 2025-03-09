@@ -15,7 +15,7 @@ describe('FONT_FILE_NAME_REGEX', () => {
   ];
 
   validTestCases.forEach((testCase) => {
-    spec(`should match valid font file name: ${testCase}`, async () => {
+    spec(`should match valid font file name: ${testCase}`, () => {
       expect(testCase).toMatch(FONT_FILE_NAME_REGEX);
     });
   });
@@ -34,7 +34,7 @@ describe('FONT_FILE_NAME_REGEX', () => {
   ];
 
   invalidTestCases.forEach((testCase) => {
-    spec(`should not match invalid font file name: ${testCase}`, async () => {
+    spec(`should not match invalid font file name: ${testCase}`, () => {
       expect(testCase).not.toMatch(FONT_FILE_NAME_REGEX);
     });
   });
