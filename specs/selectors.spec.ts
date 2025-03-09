@@ -50,7 +50,7 @@ describe('Nested Selectors Regex', () => {
     { selector: '&[attribute] + p', regex: NESTED_ATTRIBUTE_SIBLING_REGEX },
     { selector: '&[attribute] > p', regex: NESTED_ATTRIBUTE_CHILD_REGEX },
     { selector: '&.class + p', regex: NESTED_CLASS_SIBLING_REGEX },
-    { selector: '&.class > p', regex: NESTED_CLASS_CHILD_REGEX }
+    { selector: '&.class > p', regex: NESTED_CLASS_CHILD_REGEX },
   ];
 
   testCases.forEach(({ selector, regex }) => {
