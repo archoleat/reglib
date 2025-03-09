@@ -22,115 +22,40 @@ import {
 } from '#src/index.ts';
 
 describe('Nested Selectors Regex', () => {
-  spec('should match &[attribute]', async () => {
-    expect('&[attribute]').toMatch(new RegExp(NESTED_ATTRIBUTE_REGEX));
-  });
+  const testCases = [
+    { selector: '&[attribute]', regex: NESTED_ATTRIBUTE_REGEX },
+    { selector: '&[attribute=value]', regex: NESTED_ATTRIBUTE_REGEX },
+    { selector: '&[attribute*=value]', regex: NESTED_ATTRIBUTE_REGEX },
+    { selector: '&[attribute="value"]', regex: NESTED_ATTRIBUTE_REGEX },
+    { selector: '&[attribute*="value"]', regex: NESTED_ATTRIBUTE_REGEX },
+    { selector: "&[attribute='value']", regex: NESTED_ATTRIBUTE_REGEX },
+    { selector: "&[attribute*='value']", regex: NESTED_ATTRIBUTE_REGEX },
+    { selector: '&.class', regex: NESTED_CLASS_REGEX },
+    { selector: '&--modifier', regex: NESTED_MODIFIER_REGEX },
+    { selector: '&__element', regex: NESTED_ELEMENT_REGEX },
+    { selector: '[attribute]', regex: ATTRIBUTE_REGEX },
+    { selector: '[attribute=value]', regex: ATTRIBUTE_REGEX },
+    { selector: '[attribute*=value]', regex: ATTRIBUTE_REGEX },
+    { selector: '.class', regex: CLASS_REGEX },
+    { selector: '--modifier', regex: MODIFIER_REGEX },
+    { selector: '__element', regex: ELEMENT_REGEX },
+    { selector: '+ p', regex: SIBLING_REGEX },
+    { selector: '> p', regex: CHILD_REGEX },
+    { selector: 'div + p', regex: SIBLING_REGEX },
+    { selector: 'div > p', regex: CHILD_REGEX },
+    { selector: '[attribute] + p', regex: ATTRIBUTE_SIBLING_REGEX },
+    { selector: '[attribute] > p', regex: ATTRIBUTE_CHILD_REGEX },
+    { selector: '.class + p', regex: CLASS_SIBLING_REGEX },
+    { selector: '.class > p', regex: CLASS_CHILD_REGEX },
+    { selector: '&[attribute] + p', regex: NESTED_ATTRIBUTE_SIBLING_REGEX },
+    { selector: '&[attribute] > p', regex: NESTED_ATTRIBUTE_CHILD_REGEX },
+    { selector: '&.class + p', regex: NESTED_CLASS_SIBLING_REGEX },
+    { selector: '&.class > p', regex: NESTED_CLASS_CHILD_REGEX }
+  ];
 
-  spec('should match &[attribute=value]', async () => {
-    expect('&[attribute=value]').toMatch(new RegExp(NESTED_ATTRIBUTE_REGEX));
-  });
-
-  spec('should match &[attribute*=value]', async () => {
-    expect('&[attribute*=value]').toMatch(new RegExp(NESTED_ATTRIBUTE_REGEX));
-  });
-
-  spec('should match &[attribute="value"]', async () => {
-    expect('&[attribute="value"]').toMatch(new RegExp(NESTED_ATTRIBUTE_REGEX));
-  });
-
-  spec('should match &[attribute*="value"]', async () => {
-    expect('&[attribute*="value"]').toMatch(new RegExp(NESTED_ATTRIBUTE_REGEX));
-  });
-
-  spec("should match &[attribute='value']", async () => {
-    expect("&[attribute='value']").toMatch(new RegExp(NESTED_ATTRIBUTE_REGEX));
-  });
-
-  spec("should match &[attribute*='value']", async () => {
-    expect("&[attribute*='value']").toMatch(new RegExp(NESTED_ATTRIBUTE_REGEX));
-  });
-
-  spec('should match &.class', async () => {
-    expect('&.class').toMatch(new RegExp(NESTED_CLASS_REGEX));
-  });
-
-  spec('should match &--modifier', async () => {
-    expect('&--modifier').toMatch(new RegExp(NESTED_MODIFIER_REGEX));
-  });
-
-  spec('should match &__element', async () => {
-    expect('&__element').toMatch(new RegExp(NESTED_ELEMENT_REGEX));
-  });
-
-  spec('should match [attribute]', async () => {
-    expect('[attribute]').toMatch(new RegExp(ATTRIBUTE_REGEX));
-  });
-
-  spec('should match [attribute=value]', async () => {
-    expect('[attribute=value]').toMatch(new RegExp(ATTRIBUTE_REGEX));
-  });
-
-  spec('should match [attribute*=value]', async () => {
-    expect('[attribute*=value]').toMatch(new RegExp(ATTRIBUTE_REGEX));
-  });
-
-  spec('should match .class', async () => {
-    expect('.class').toMatch(new RegExp(CLASS_REGEX));
-  });
-
-  spec('should match --modifier', async () => {
-    expect('--modifier').toMatch(new RegExp(MODIFIER_REGEX));
-  });
-
-  spec('should match __element', async () => {
-    expect('__element').toMatch(new RegExp(ELEMENT_REGEX));
-  });
-
-  spec('should match sibling selector', async () => {
-    expect('+ p').toMatch(new RegExp(SIBLING_REGEX));
-  });
-
-  spec('should match child selector', async () => {
-    expect('> p').toMatch(new RegExp(CHILD_REGEX));
-  });
-
-  spec('should match sibling selector', async () => {
-    expect('div + p').toMatch(new RegExp(SIBLING_REGEX));
-  });
-
-  spec('should match child selector', async () => {
-    expect('div > p').toMatch(new RegExp(CHILD_REGEX));
-  });
-
-  spec('should match attribute sibling selector', async () => {
-    expect('[attribute] + p').toMatch(new RegExp(ATTRIBUTE_SIBLING_REGEX));
-  });
-
-  spec('should match attribute child selector', async () => {
-    expect('[attribute] > p').toMatch(new RegExp(ATTRIBUTE_CHILD_REGEX));
-  });
-
-  spec('should match class sibling selector', async () => {
-    expect('.class + p').toMatch(new RegExp(CLASS_SIBLING_REGEX));
-  });
-
-  spec('should match class child selector', async () => {
-    expect('.class > p').toMatch(new RegExp(CLASS_CHILD_REGEX));
-  });
-
-  spec('should match nested attribute sibling selector', async () => {
-    expect('&[attribute] + p').toMatch(new RegExp(NESTED_ATTRIBUTE_SIBLING_REGEX));
-  });
-
-  spec('should match nested attribute child selector', async () => {
-    expect('&[attribute] > p').toMatch(new RegExp(NESTED_ATTRIBUTE_CHILD_REGEX));
-  });
-
-  spec('should match nested class sibling selector', async () => {
-    expect('&.class + p').toMatch(new RegExp(NESTED_CLASS_SIBLING_REGEX));
-  });
-
-  spec('should match nested class child selector', async () => {
-    expect('&.class > p').toMatch(new RegExp(NESTED_CLASS_CHILD_REGEX));
+  testCases.forEach(({ selector, regex }) => {
+    spec(`should match "${selector}"`, () => {
+      expect(selector).toMatch(new RegExp(regex));
+    });
   });
 });
