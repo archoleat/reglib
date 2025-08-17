@@ -25,18 +25,6 @@ regular expressions for various use cases.
 bun i -D @archoleat/reglib
 ```
 
-```shell
-pnpm i -D @archoleat/reglib
-```
-
-```shell
-npm i -D @archoleat/reglib
-```
-
-```shell
-yarn add @archoleat/reglib --dev
-```
-
 ## List of Regex
 
 - ATTRIBUTE_REGEX
