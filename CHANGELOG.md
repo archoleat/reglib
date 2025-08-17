@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.9.1](https://github.com/archoleat/reglib/compare/v1.9.0...v1.9.1) (2025-08-17)
+
+### Bug Fixes
+
+* format ([#171](https://github.com/archoleat/reglib/issues/171)) ([0ad3110](https://github.com/archoleat/reglib/commit/0ad31100e17a03990b05d9e1217c34492e647a1a))
+* formatting ([cee75fa](https://github.com/archoleat/reglib/commit/cee75faca3e965ac20a853810169f38ee3ee7fa3))
+* tslib ([#173](https://github.com/archoleat/reglib/issues/173)) ([fd04f7f](https://github.com/archoleat/reglib/commit/fd04f7f38604c21f6a5807d175d53013d85bb93d))
+
+### Code Refactoring
+
+* actions ([#172](https://github.com/archoleat/reglib/issues/172)) ([d006196](https://github.com/archoleat/reglib/commit/d00619606caea67c674548424e6277271d77b21a))
+* dependabot ([#165](https://github.com/archoleat/reglib/issues/165)) ([c5e0b47](https://github.com/archoleat/reglib/commit/c5e0b4790daab1d96fa3de264c4b2dc6bb6caf02))
+* font-file-name.spec.ts ([#141](https://github.com/archoleat/reglib/issues/141)) ([6c1a5c0](https://github.com/archoleat/reglib/commit/6c1a5c063a31684bd3093c3c61610f2b3e4718b5))
+* hyphens.spec.ts ([eba7a1a](https://github.com/archoleat/reglib/commit/eba7a1ac44bce61972481cdf507193426fa89b8a))
+* remove comments ([8fef83c](https://github.com/archoleat/reglib/commit/8fef83c59386d7158792e4478e1878c05a5fb775))
+
 ## [1.9.0](https://github.com/archoleat/reglib/compare/v1.8.0...v1.9.0) (2025-03-09)
 
 ### Features
