@@ -15,7 +15,6 @@
 - [List of Regex](#list-of-regex)
 - [Contributing](#contributing)
 - [License](#license)
-- [License](#license)
 
 This library provides a collection of useful
 regular expressions for various use cases.
