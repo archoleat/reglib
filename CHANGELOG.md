@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.9.2](https://github.com/archoleat/reglib/compare/v1.9.1...v1.9.2) (2025-08-19)
+
+### Code Refactoring
+
+* action ([#175](https://github.com/archoleat/reglib/issues/175)) ([9863266](https://github.com/archoleat/reglib/commit/9863266939c6c9728fd0b9dabda9b51409d0c647))
+* readme ([#176](https://github.com/archoleat/reglib/issues/176)) ([155fda7](https://github.com/archoleat/reglib/commit/155fda79b168a3902a49f3cddc9a90c421bb88ff))
+
+### Documentation
+
+* readme ([#174](https://github.com/archoleat/reglib/issues/174)) ([ff305d9](https://github.com/archoleat/reglib/commit/ff305d9546aaaae7898840c905d523db3e9e05a9))
+
 ## [1.9.1](https://github.com/archoleat/reglib/compare/v1.9.0...v1.9.1) (2025-08-17)
 
 ### Bug Fixes
