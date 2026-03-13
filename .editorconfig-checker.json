@@ -2,6 +2,8 @@
   "exclude": [
     "CHANGELOG.md",
     "config.yml",
+    "mobile.spec.ts",
+    "name.ts",
     "README.md",
     "selectors.ts",
     "semantic-pull-request-title.yaml"
