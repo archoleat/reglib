@@ -1,5 +1,8 @@
+export { EMAIL_REGEX } from '#validators/email.ts';
 export { FONT_FILE_NAME_REGEX } from '#validators/font-file-name.ts';
 export { HYPHEN_REGEX, HYPHENS_REGEX } from '#validators/hyphens.ts';
+export { IS_MOBILE_REGEX } from '#validators/mobile.ts';
+export { NAME_REGEX } from '#validators/name.ts';
 export {
   ATTRIBUTE_CHILD_REGEX,
   ATTRIBUTE_REGEX,
