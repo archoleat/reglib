@@ -138,8 +138,11 @@ bun i -D @archoleat/reglib
 - EMAIL_REGEX
 
   - Pattern: `^[^\s@]+@[^\s@]+\.[^\s@]+$`.
+
   - Description: Matches email addresses with basic validation.
-  - Example: Matches `user@example.com`, `test.email@domain.co.uk`, but not `invalid@`, `@domain.com`, or `user@domain`.
+
+  - Example: Matches `user@example.com`, `test.email@domain.co.uk`,
+    but not `invalid@`, `@domain.com`, or `user@domain`.
 
 - FONT_FILE_NAME_REGEX
 
@@ -154,14 +157,21 @@ bun i -D @archoleat/reglib
 - IS_MOBILE_REGEX
 
   - Pattern: `Mobi|iP(hone|od|ad)|Android|BlackBerry`.
+
   - Description: Detects mobile devices based on user agent strings.
-  - Example: Matches `iPhone`, `iPad`, `Android`, `BlackBerry`, `Mobile Safari`, but not `Windows`, `Macintosh`.
+
+  - Example: Matches `iPhone`, `iPad`, `Android`, `BlackBerry`,
+    `Mobile Safari`, but not `Windows`, `Macintosh`.
 
 - NAME_REGEX
 
   - Pattern: `^(?!-)[A-Za-z\u00C0-\u017FА-Яа-яЁё\s\-\u3000\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FAF\u3400-\u4DBF]+(?<!-)$`.
-  - Description: Matches names with support for Latin, Cyrillic, Japanese, and Chinese scripts. Cannot start or end with a hyphen.
-  - Example: Matches `John Doe`, `Jean-Paul`, `Иван Петров`, `田中太郎`, but not `-John`, `Name-`, or `123`.
+
+  - Description: Matches names with support for Latin, Cyrillic,
+    Japanese, and Chinese scripts. Cannot start or end with a hyphen.
+
+  - Example: Matches `John Doe`, `Jean-Paul`, `Иван Петров`,
+    `田中太郎`, but not `-John`, `Name-`, or `123`.
 
 ## Contributing
 
