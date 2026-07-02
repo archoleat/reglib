@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.10.1](https://github.com/archoleat/reglib/compare/v1.10.0...v1.10.1) (2026-07-01)
+
+### Bug Fixes
+
+* actions ([7dde398](https://github.com/archoleat/reglib/commit/7dde3989b0165883d29bae63b16b0a56c561eb59))
+* bun version ([1a60166](https://github.com/archoleat/reglib/commit/1a60166472506f42316a1e557eeadfe8bd28622b))
+
+### Documentation
+
+* fix readme ([be5af11](https://github.com/archoleat/reglib/commit/be5af11d6e2b407e4a50d63fc3089294a98f9eba))
+* rewrite ([1dd1a0c](https://github.com/archoleat/reglib/commit/1dd1a0c915b4515424767e1dd44f2ceb51cc5e9d))
+
 ## [1.10.0](https://github.com/archoleat/reglib/compare/v1.9.3...v1.10.0) (2026-03-13)
 
 ### Features
