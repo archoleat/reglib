@@ -5,6 +5,7 @@
     "mobile.spec.ts",
     "name.ts",
     "README.md",
+    "release.yaml",
     "selectors.ts",
     "semantic-pull-request-title.yaml"
   ]
