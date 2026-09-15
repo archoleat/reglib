@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.2](https://github.com/archoleat/reglib/compare/v1.10.1...v1.10.2) (2026-09-15)
+
+### Bug Fixes
+
+* **ci:** declare TypeScript and use client-id ([293b13e](https://github.com/archoleat/reglib/commit/293b13e43f11eea2ef4d24d0ed49a937b7a56dce))
+* **release:** use compatible changelog preset ([ac86d59](https://github.com/archoleat/reglib/commit/ac86d59d9959955bf2e0d07fe2d94a9c35f91012))
+
 ## [1.10.1](https://github.com/archoleat/reglib/compare/v1.10.0...v1.10.1) (2026-07-01)
 
 ### Bug Fixes
