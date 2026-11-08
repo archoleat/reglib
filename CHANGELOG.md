@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.10.3](https://github.com/archoleat/reglib/compare/v1.10.2...v1.10.3) (2026-11-08)
+
+### Bug Fixes
+
+* use stable Node.js for releases ([58c58c1](https://github.com/archoleat/reglib/commit/58c58c10213214cfe3c271bba380c18c0e923c25))
+
+### Documentation
+
+* clarify regex fragments and filename constraints ([97b3b47](https://github.com/archoleat/reglib/commit/97b3b47e4cce331bf595620d88bf26d06f8ac6b6))
+
 ## [1.10.2](https://github.com/archoleat/reglib/compare/v1.10.1...v1.10.2) (2026-09-15)
 
 ### Bug Fixes
