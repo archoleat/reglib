@@ -12,7 +12,7 @@
 
 ## Table of Contents
 
-- [Installation](#installtion)
+- [Installation](#installation)
 - [List of Regex](#list-of-regex)
 - [Contributing](#contributing)
 - [License](#license)
@@ -28,35 +28,53 @@ bun i -D @archoleat/reglib
 
 ## List of Regex
 
+CSS and BEM patterns are unanchored fragments for composing expressions
+or finding matches inside a string. A successful `.test()` does not validate
+the entire input.
+Wrap a fragment in `^(?:...)$` when you need a whole-value check:
+
+```typescript
+import { BLOCK_REGEX } from '@archoleat/reglib';
+
+const isBlock = new RegExp(`^(?:${BLOCK_REGEX})$`);
+
+isBlock.test('my-block'); // true
+isBlock.test('Block'); // false
+isBlock.test('block!'); // false
+```
+
+`ATTRIBUTE_REGEX` matches any nonempty bracketed text, including spaces.
+It does not validate CSS attribute-selector syntax.
+
 - ATTRIBUTE_REGEX
 
   - Pattern: `\[[^\]]+\]`.
   - Description: Matches an attribute in square brackets.
-  - Example: Matches `[attr]`, `[data-test]`, but not `[attr or attr]`.
+  - Example: Finds `[attr]`, `[data-test]`, and `[attr or attr]`.
 
 - CLASS_REGEX
 
   - Pattern: `\.[a-z0-9_-]+`.
   - Description: Matches a CSS class name starting with a dot (.).
-  - Example: Matches `.class`, `.my-class`, `.class_name`, but not `class` or `.class!`.
+  - Example: Finds `.class`, `.my-class`, `.class_name`, and `.class` inside `.class!`.
 
 - BLOCK_REGEX
 
   - Pattern: `[a-z][a-z0-9]*(-[a-z0-9]+)*`.
   - Description: Matches a BEM block name.
-  - Example: Matches `block`, `my-block`, `block-name`, but not `Block` or `block!`.
+  - Example: Finds `lock` inside `Block` and `block` inside `block!`.
 
 - ELEMENT_REGEX
 
   - Pattern: `(__[a-z0-9]+(-[a-z0-9]+)*)`.
   - Description: Matches a BEM element name.
-  - Example: Matches `__element`, `__my-element`, but not `element` or `__element!`.
+  - Example: Finds `__element`, `__my-element`, and `__element` inside `__element!`.
 
 - MODIFIER_REGEX
 
   - Pattern: `(--[a-z0-9]+(-[a-z0-9]+)*)`.
   - Description: Matches a BEM modifier name.
-  - Example: Matches `--modifier`, `--my-modifier`, but not `modifier` or `--modifier!`.
+  - Example: Finds `--modifier`, `--my-modifier`, and `--modifier` inside `--modifier!`.
 
 - SIBLING_REGEX
 
@@ -150,9 +168,10 @@ bun i -D @archoleat/reglib
   - Pattern: A complex regex for matching font file names.
 
   - Description: Matches font file names based on family,
-    weight, italic, variable, and extension.
+    weight, italic, variable, and extension. Family names contain one or two
+    PascalCase words; `OpenSansCondensed-Regular.woff2` does not match.
 
-  - Example: Matches `Roboto-Bold.woff2`, `OpenSans-Italic-Variable.ttf`.
+  - Example: Matches `Roboto-Bold.woff2`, `OpenSans-ItalicVariable.ttf`.
     > More info [validate-font-file-name](https://github.com/archoleat/validate-font-file-name)
 
 - IS_MOBILE_REGEX
