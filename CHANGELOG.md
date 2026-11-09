@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.10.4](https://github.com/archoleat/reglib/compare/v1.10.3...v1.10.4) (2026-11-09)
+
+### Bug Fixes
+
+* correct documented font example ([48454d5](https://github.com/archoleat/reglib/commit/48454d58d811305bd69d7563deec301eba724634))
+
+### Documentation
+
+* clarify usage and project constraints ([a41ae0d](https://github.com/archoleat/reglib/commit/a41ae0da45f10e374d87a53cf69ebcdaf3f9b70a))
+
 ## [1.10.3](https://github.com/archoleat/reglib/compare/v1.10.2...v1.10.3) (2026-11-08)
 
 ### Bug Fixes
