@@ -1,6 +1,6 @@
 {
   "name": "@archoleat/reglib",
-  "description": "Library with ready-to-use regex",
+  "description": "Regex patterns for CSS selectors, BEM and font filenames",
   "version": "1.10.3",
   "license": "MIT",
   "author": {
@@ -18,13 +18,12 @@
   },
   "keywords": [
     "archoleat",
-    "ready-to-use",
+    "bem",
+    "css-selectors",
+    "font-filename",
     "regex",
     "typescript"
   ],
-  "engines": {
-    "bun": ">=1.0.0"
-  },
   "type": "module",
   "imports": {
     "#src/*": "./src/*",

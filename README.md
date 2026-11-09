@@ -13,6 +13,7 @@
 ## Table of Contents
 
 - [Installation](#installation)
+- [Runtime](#runtime)
 - [List of Regex](#list-of-regex)
 - [Contributing](#contributing)
 - [License](#license)
@@ -27,6 +28,13 @@ bun i @archoleat/reglib
 ```
 
 Use `bun i -D @archoleat/reglib` when only development tools import it.
+
+## Runtime
+
+The package is an ES module with no runtime dependencies and can be imported
+in Node.js or a browser bundle. The consuming JavaScript engine must support
+Unicode regular expressions and lookbehind assertions. Bun is used for
+repository tooling, not required by the published module.
 
 ## List of Regex
 
@@ -173,7 +181,7 @@ It does not validate CSS attribute-selector syntax.
     weight, italic, variable, and extension. Family names contain one or two
     PascalCase words; `OpenSansCondensed-Regular.woff2` does not match.
 
-  - Example: Matches `Roboto-Bold.woff2`, `OpenSans-ItalicVariable.ttf`.
+  - Example: Matches `Roboto-Bold.woff2`, `OpenSans-RegularItalicVariable.ttf`.
     > More info [validate-font-file-name](https://github.com/archoleat/validate-font-file-name)
 
 - IS_MOBILE_REGEX

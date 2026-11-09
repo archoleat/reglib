@@ -27,6 +27,22 @@ const invalidTestCases = [
 ];
 
 describe('FONT_FILE_NAME_REGEX', () => {
+  spec('should match every documented positive font example', async () => {
+    const readme = await Bun.file(new URL('../README.md', import.meta.url)).text();
+    const section = readme
+      .split('- FONT_FILE_NAME_REGEX')[1]
+      ?.split('- IS_MOBILE_REGEX')[0];
+    const examples =
+      section?.split('Example: Matches')[1]?.match(/`[^`]+\.(?:woff2?|otf|ttf)`/g) ??
+      [];
+
+    expect(examples.length).toBeGreaterThan(0);
+
+    for (const example of examples) {
+      expect(example.slice(1, -1)).toMatch(FONT_FILE_NAME_REGEX);
+    }
+  });
+
   validTestCases.forEach((testCase) => {
     spec(`should match valid font file name: ${testCase}`, () => {
       expect(testCase).toMatch(FONT_FILE_NAME_REGEX);
