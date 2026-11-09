@@ -1,6 +1,6 @@
 {
   "name": "@archoleat/reglib",
-  "description": "Regex patterns for CSS selectors, BEM and font filenames",
+  "description": "Composable regular-expression fragments for matching common string patterns.",
   "version": "1.10.5",
   "license": "MIT",
   "author": {
