@@ -1,8 +1,8 @@
-export { EMAIL_REGEX } from '#validators/email.ts';
-export { FONT_FILE_NAME_REGEX } from '#validators/font-file-name.ts';
-export { HYPHEN_REGEX, HYPHENS_REGEX } from '#validators/hyphens.ts';
-export { IS_MOBILE_REGEX } from '#validators/mobile.ts';
-export { NAME_REGEX } from '#validators/name.ts';
+export { EMAIL_REGEX } from '#validators/email.js';
+export { FONT_FILE_NAME_REGEX } from '#validators/font-file-name.js';
+export { HYPHEN_REGEX, HYPHENS_REGEX } from '#validators/hyphens.js';
+export { IS_MOBILE_REGEX } from '#validators/mobile.js';
+export { NAME_REGEX } from '#validators/name.js';
 export {
   ATTRIBUTE_CHILD_REGEX,
   ATTRIBUTE_REGEX,
@@ -23,4 +23,4 @@ export {
   NESTED_ELEMENT_REGEX,
   NESTED_MODIFIER_REGEX,
   SIBLING_REGEX,
-} from '#validators/selectors.ts';
+} from '#validators/selectors.js';
