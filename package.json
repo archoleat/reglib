@@ -18,10 +18,9 @@
   },
   "keywords": [
     "archoleat",
-    "bem",
-    "css-selectors",
-    "font-filename",
+    "pattern-matching",
     "regex",
+    "regular-expressions",
     "typescript"
   ],
   "type": "module",
