@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.10.5](https://github.com/archoleat/reglib/compare/v1.10.4...v1.10.5) (2026-11-09)
+
+### Bug Fixes
+
+* align npm keywords with repository topics ([635bb08](https://github.com/archoleat/reglib/commit/635bb080879a0a2a95214de50b91ca477086ffae))
+
 ## [1.10.4](https://github.com/archoleat/reglib/compare/v1.10.3...v1.10.4) (2026-11-09)
 
 ### Bug Fixes

@@ -1,7 +1,7 @@
 {
   "name": "@archoleat/reglib",
   "description": "Regex patterns for CSS selectors, BEM and font filenames",
-  "version": "1.10.4",
+  "version": "1.10.5",
   "license": "MIT",
   "author": {
     "email": "nikkeyl.me@gmail.com",
