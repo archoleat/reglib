@@ -23,8 +23,10 @@ regular expressions for various use cases.
 ## Installation
 
 ```shell
-bun i -D @archoleat/reglib
+bun i @archoleat/reglib
 ```
+
+Use `bun i -D @archoleat/reglib` when only development tools import it.
 
 ## List of Regex
 
@@ -178,7 +180,10 @@ It does not validate CSS attribute-selector syntax.
 
   - Pattern: `Mobi|iP(hone|od|ad)|Android|BlackBerry`.
 
-  - Description: Detects mobile devices based on user agent strings.
+  - Description: Matches selected mobile user-agent tokens. This is a
+    heuristic: user-agent strings can be spoofed, reduced, or presented in
+    desktop mode. It does not identify screen size or input capabilities;
+    use CSS media queries and feature detection for responsive behavior.
 
   - Example: Matches `iPhone`, `iPad`, `Android`, `BlackBerry`,
     `Mobile Safari`, but not `Windows`, `Macintosh`.
@@ -189,6 +194,9 @@ It does not validate CSS attribute-selector syntax.
 
   - Description: Matches names with support for Latin, Cyrillic,
     Japanese, and Chinese scripts. Cannot start or end with a hyphen.
+    This is a restricted character allowlist, not a universal personal-name
+    validator: valid names with apostrophes, combining marks, or other scripts
+    may be rejected. A match does not establish a person's identity.
 
   - Example: Matches `John Doe`, `Jean-Paul`, `Иван Петров`,
     `田中太郎`, but not `-John`, `Name-`, or `123`.
