@@ -1,7 +1,7 @@
 {
   "name": "@archoleat/reglib",
   "description": "Composable regular-expression fragments for matching common string patterns.",
-  "version": "1.10.5",
+  "version": "1.10.6",
   "license": "MIT",
   "author": {
     "email": "nikkeyl.me@gmail.com",

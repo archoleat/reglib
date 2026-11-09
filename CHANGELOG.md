@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.10.6](https://github.com/archoleat/reglib/compare/v1.10.5...v1.10.6) (2026-11-09)
+
+### Bug Fixes
+
+* align package description with repository metadata ([2d63c5e](https://github.com/archoleat/reglib/commit/2d63c5ed63912e678e14265e362bdda9c9cf5d42))
+
 ## [1.10.5](https://github.com/archoleat/reglib/compare/v1.10.4...v1.10.5) (2026-11-09)
 
 ### Bug Fixes
